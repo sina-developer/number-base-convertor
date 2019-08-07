@@ -9,27 +9,27 @@ instagram : https://instagram.com/sina_developer
 using namespace std;
 
 
-void Base(int n , int m)
+void ConvertBase(int base , int number)
 {	
-    if (m / n < n)
+    if (number / base < base)
     {	
-        cout << (m / n) << (m % n);
+        cout << (number / base) << (number % base);
     }
     else
     {
-        Base(n, m / n);
-        cout <<(m % n);
+        Base(base, number / base);
+        cout <<(number % base);
     }
 }
 
 int main() 
 {
-	int n , m;
-	cout << "Enter N = ";
-	cin>>n;
-	cout<< "Enter M = ";
-	cin >> m;
-	Base(n,m);
+	int base , number;
+	cout << "Enter Target Base = ";
+	cin>>base;
+	cout<< "Enter Your Number = ";
+	cin >> number;
+	ConvertBase(base,number);
     return 0;
 }
 
